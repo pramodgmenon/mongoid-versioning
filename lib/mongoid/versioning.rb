@@ -41,7 +41,7 @@ module Mongoid
       previous = previous_revision
       if previous && versioned_attributes_changed?
         new_version = versions.build(previous.versioned_attributes)
-        new_version._id = nil
+        #new_version._id = nil
         if version_max.present? && versions.length > version_max
           deleted = versions.first
           versions.delete(deleted)
